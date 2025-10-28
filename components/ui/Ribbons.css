@@ -1,0 +1,206 @@
+/* Ribbon components styling - Fully Responsive */
+
+.ribbon1 {
+    pointer-events: none;
+    overflow: visible;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+    opacity: 1;
+}
+
+.ribbon2 {
+    pointer-events: none;
+    overflow: visible;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 3000px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+    opacity: 1;
+}
+
+/* Initial state for paths - Start completely off-screen */
+.ribbon1 path,
+.ribbon2 path {
+    stroke-dasharray: 8000;
+    stroke-dashoffset: 9000; /* Start with extra offset to ensure off-screen start */
+    transition: stroke-dashoffset 0.05s ease-out; /* Smoother, faster transition */
+    will-change: stroke-dashoffset;
+    opacity: 1;
+}
+
+/* Container styling to prevent overflow */
+.relative {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Responsive breakpoints */
+
+/* Mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .ribbon1,
+    .ribbon2 {
+        transform: scale(0.6);
+        transform-origin: center top;
+    }
+    
+    .ribbon1 path,
+    .ribbon2 path {
+        stroke-width: 20;
+    }
+    
+    .ribbon1 {
+        top: 0;
+        height: 200vh;
+        z-index: 5;
+    }
+    
+    .ribbon2 {
+        top: 120vh;
+        height: 200;
+    }
+}
+
+/* Medium tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ribbon1,
+    .ribbon2 {
+        transform: scale(0.85);
+        transform-origin: center top;
+    }
+    
+    .ribbon1 path,
+    .ribbon2 path {
+        stroke-width: 28;
+    }
+    
+    .ribbon2 {
+        top: 2900px;
+    }
+}
+
+/* Large tablets and small laptops (1025px to 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .ribbon1,
+    .ribbon2 {
+        transform: scale(0.9);
+        transform-origin: center top;
+    }
+    
+    .ribbon2 {
+        top: 2950px;
+    }
+}
+
+/* Desktop (1201px to 1440px) */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .ribbon1,
+    .ribbon2 {
+        transform: scale(0.95);
+        transform-origin: center top;
+    }
+    
+    .ribbon2 {
+        top: 2980px;
+    }
+}
+
+/* Large desktop (1441px to 1920px) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .ribbon1,
+    .ribbon2 {
+        transform: scale(1);
+    }
+    
+    .ribbon2 {
+        top: 3000px;
+    }
+}
+
+/* Extra large screens (above 1920px) */
+@media (min-width: 1921px) {
+    .ribbon1,
+    .ribbon2 {
+        transform: scale(1.1);
+        transform-origin: center top;
+    }
+    
+    .ribbon2 {
+        top: 3100px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .ribbon1,
+    .ribbon2 {
+        transform: scale(0.4);
+        transform-origin: left top;
+    }
+    
+    .ribbon1 {
+        top: 0;
+        height: 80vh;
+    }
+    
+    .ribbon2 {
+        top: 40vh;
+        height: 40vh;
+    }
+}
+
+/* Additional mobile gap fixes */
+/* Hide ribbons completely on mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .ribbon1,
+    .ribbon2 {
+        display: none !important;
+    }
+}
+
+
+/* Prevent horizontal scrolling */
+* {
+    box-sizing: border-box;
+}
+
+.ribbon1,
+.ribbon2 {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ribbon1 path,
+    .ribbon2 path {
+        stroke-width: 32;
+    }
+}
+
+/* Accessibility - Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .ribbon1 path,
+    .ribbon2 path {
+        transition: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .ribbon1,
+    .ribbon2 {
+        opacity: 0.9;
+    }
+}

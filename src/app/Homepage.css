@@ -1,0 +1,595 @@
+/* Homepage Styles */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+}
+
+.headline {
+    margin-bottom: 2rem;
+}
+
+.title {
+    /* Responsive font using clamp() */
+    font-size: clamp(2.5rem, 10vw, 150px);
+    font-weight: 400;
+    /* corrected from semi-bold */
+    line-height: 1.1;
+    margin: 0 auto;
+    max-width: 90%;
+    /* Prevent overflow on smaller screens */
+    word-break: break-word;
+    /* Wrap long text */
+}
+
+.accent {
+    color: #1D00F8;
+    background: #1D00F8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cardAndDesc {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 50px;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.card-col {
+    display: flex;
+    justify-content: left;
+    margin: 0rem 0;
+    flex: 1;
+}
+
+.desc-col {
+    max-width: 600px;
+    margin: 0 auto;
+    justify-content: right;
+    flex: 1;
+    margin-right: 70px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 120px;
+}
+
+.servicestitle {
+    font-size: 6rem;
+    color: #1D00F8;
+    background: #1D00F8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Features Section Responsiveness */
+.features-section {
+    margin-bottom: 80px;
+}
+
+.features-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 0 1rem;
+}
+
+.servicescards {
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 55px;
+    padding: 0 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    margin-top: 180px;
+    padding: 0 1rem;
+}
+
+.testimonials-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Globe Section */
+.globe-section {
+    margin-top: 150px;
+    padding: 0 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.globe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.globe-titles {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.globe-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 800px;
+}
+
+.globe-wrapper {
+    width: 1400px;
+    height: 1400px;
+    flex-shrink: 0;
+    position: relative;
+    left: -20%;
+    top: -30%;
+    z-index: 1;
+}
+
+.globe-text-card {
+    width: 100%;
+    max-width: 500px;
+    min-height: 400px;
+    border-radius: 20px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%),
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.6) 0%, transparent 70%),
+        rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 20px 40px rgba(31, 38, 135, 0.3),
+        0 8px 16px rgba(0, 0, 0, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.globe-text-card:hover {
+    transform: translateY(-30px);
+    box-shadow:
+        0 30px 60px rgba(31, 38, 135, 0.4),
+        0 12px 24px rgba(0, 0, 0, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Services Grid */
+.services-grid-section {
+    margin-top: 180px;
+    padding: 0 1rem;
+}
+
+.services-grid-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 180px;
+    margin-bottom: 0px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bento-grid-container {
+    padding: 100px 20px;
+    margin-top: -50px;
+}
+
+/* Contact Section */
+.contact-section {
+    margin-top: 50px;
+    padding: 0 1rem;
+}
+
+.contact-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .globe-wrapper {
+        width: 1400px;
+        height: 1400px;
+        left: -25%;
+        top: -30%;
+    }
+
+    .globe-text-card {
+        max-width: 600px;
+        padding: 50px;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+    .cardAndDesc {
+        margin-left: 20px;
+        gap: 1.5rem;
+    }
+
+    .desc-col {
+        margin-right: 20px;
+    }
+
+    .actions {
+        margin-right: 50px;
+    }
+
+    .servicescards {
+        column-gap: 30px;
+        padding: 0 15px;
+    }
+
+    .globe-wrapper {
+        width: 1200px;
+        height: 1200px;
+        left: -20%;
+        top: -10%;
+    }
+
+    .bento-grid-container {
+        padding: 80px 15px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .cardAndDesc {
+        flex-direction: column;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .card-col {
+        justify-content: center;
+    }
+
+    .desc-col {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .actions {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .servicescards {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 20px;
+    }
+
+    .service-item {
+        min-width: 250px;
+    }
+
+    .testimonials-section {
+        margin-top: 120px;
+    }
+
+    .testimonials-title {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .globe-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .globe-wrapper {
+        width: 800px;
+        height: 800px;
+        left: -15%;
+        top: -5%;
+    }
+
+    .globe-text-card {
+        padding: 30px;
+        min-height: 300px;
+    }
+
+    .bento-grid-container {
+        padding: 60px 10px;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+    .hero {
+        padding: 1rem;
+    }
+
+    /* Ensure hero title uses full width and lines stack cleanly */
+    .title {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-line-1,
+    .hero-line-2 {
+        display: block;
+        width: 100%;
+        white-space: normal !important;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        transform: none !important;
+        /* no horizontal offset */
+    }
+
+    .headline {
+        margin-left: 0 !important;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .cardAndDesc {
+        margin-top: 20px;
+        gap: 2rem;
+    }
+
+    .servicescards {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        column-gap: 0;
+    }
+
+    .service-item {
+        width: 100%;
+        max-width: 350px;
+        min-width: auto;
+    }
+
+    .features-title h1,
+    .testimonials-title h1,
+    .services-grid-title h1,
+    .contact-title h1 {
+        font-size: 60px !important;
+        line-height: 1.1;
+    }
+
+    .testimonials-section {
+        margin-top: 80px;
+    }
+
+    .globe-section {
+        margin-top: 80px;
+    }
+
+    .globe-wrapper {
+        width: 100%;
+        max-width: 600px;
+        height: 600px;
+        left: -10%;
+        top: 0%;
+    }
+
+    .globe-text-card {
+        padding: 20px;
+        min-height: 250px;
+    }
+
+    .globe-text-card p:first-child {
+        font-size: 28px !important;
+        line-height: 1.2;
+    }
+
+    .globe-text-card p:last-child {
+        font-size: 16px !important;
+    }
+
+    .services-grid-title {
+        margin-top: 80px;
+    }
+
+    .bento-grid-container {
+        padding: 40px 10px;
+    }
+}
+
+/* Mobile Medium */
+@media (max-width: 576px) {
+    .hero {
+        padding: 0.5rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cardAndDesc {
+        margin-top: 15px;
+        gap: 1.5rem;
+    }
+
+    .features-title h1,
+    .testimonials-title h1,
+    .services-grid-title h1,
+    .contact-title h1 {
+        font-size: 48px !important;
+    }
+
+    .servicescards {
+        padding: 0 10px;
+        row-gap: 25px;
+    }
+
+    .globe-wrapper {
+        max-width: 500px;
+        height: 500px;
+        left: -5%;
+        top: 0%;
+    }
+
+    .globe-text-card {
+        padding: 15px;
+        min-height: 200px;
+    }
+
+    .globe-text-card p:first-child {
+        font-size: 24px !important;
+        margin-top: 40px !important;
+    }
+
+    .globe-text-card p:last-child {
+        font-size: 14px !important;
+        margin-top: 30px !important;
+    }
+
+    .bento-grid-container {
+        padding: 30px 5px;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+    .hero {
+        padding: 1.5rem 1rem;
+    }
+
+    .title {
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1.2;
+    }
+
+    .features-title h1,
+    .testimonials-title h1,
+    .services-grid-title h1,
+    .contact-title h1 {
+        font-size: 40px !important;
+    }
+
+    .globe-wrapper {
+        max-width: 450px;
+        height: 450px;
+        left: 0%;
+        top: 0%;
+    }
+
+    .globe-text-card p:first-child {
+        font-size: 22px !important;
+    }
+
+    .globe-text-card p:last-child {
+        font-size: 13px !important;
+    }
+}
+
+/* Utility Classes for Responsive Text */
+.responsive-title-xl {
+    font-size: clamp(40px, 8vw, 92px);
+}
+
+.responsive-title-lg {
+    font-size: clamp(36px, 7vw, 85px);
+}
+
+.responsive-title-md {
+    font-size: clamp(32px, 6vw, 75px);
+}
+
+.responsive-text {
+    font-size: clamp(14px, 2.5vw, 18px);
+}
+
+/* Ensure proper spacing and layout */
+.section-spacing {
+    margin-bottom: clamp(40px, 8vw, 80px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Logo Slider responsive offset: positive on small, negative on >=768px */
+.logo-slider-container {
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .logo-slider-container {
+        margin-top: -700px; /* large screens: maintain negative offset */
+    }
+}

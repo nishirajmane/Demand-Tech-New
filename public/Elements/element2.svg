@@ -1,0 +1,19 @@
+<svg width="1004" height="1004" viewBox="0 0 1004 1004" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2006_420)">
+<mask id="mask0_2006_420" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="1004" height="1004">
+<path d="M1004 0H0V1004H1004V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_2006_420)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M537.858 0H466.143V317.531L347.194 23.1212L280.701 49.9859L402.732 352.022L172.387 121.677L121.678 172.387L342.453 393.162L56.345 268.159L27.633 333.875L330.369 466.143H0V537.858H330.368L27.6331 670.125L56.345 735.842L342.452 610.839L121.678 831.613L172.387 882.32L402.732 651.978L280.701 954.016L347.194 980.878L466.143 686.47V1004H537.858V686.47L656.807 980.878L723.297 954.016L601.271 651.978L831.613 882.32L882.32 831.613L661.546 610.839L947.656 735.842L976.365 670.125L673.634 537.858H1004V466.143H673.629L976.365 333.875L947.656 268.159L661.546 393.162L882.32 172.387L831.613 121.677L601.271 352.021L723.297 49.9859L656.807 23.1212L537.858 317.531V0Z" fill="url(#paint0_radial_2006_420)"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_2006_420" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(502 502) rotate(90) scale(502)">
+<stop stop-color="#1A2FFB"/>
+<stop offset="1" stop-color="#0F1C95"/>
+</radialGradient>
+<clipPath id="clip0_2006_420">
+<rect width="1004" height="1004" fill="white"/>
+</clipPath>
+</defs>
+</svg>

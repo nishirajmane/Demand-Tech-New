@@ -1,0 +1,27 @@
+# robots.txt for DemandTech (Next.js)
+# SEO-optimized configuration
+
+# Allow all major search engines
+User-agent: *
+Allow: /
+
+# Disallow sensitive or unnecessary paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_next/static/
+Disallow: /_next/image
+Disallow: /server-sitemap.xml  # If using next-sitemap server mode
+Disallow: /404
+Disallow: /500
+Disallow: /internal/
+
+# Optional: Block common parameters to avoid duplicate content
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# Crawl-delay (optional, for aggressive crawlers)
+Crawl-delay: 10
+
+# Sitemap(s)
+Sitemap: https://demand-tech.com/sitemap.xml
+Sitemap: https://demand-tech.com/server-sitemap.xml

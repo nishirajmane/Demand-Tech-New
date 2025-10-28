@@ -1,0 +1,167 @@
+.icon {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+    color: #ffffff;
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 22px;
+}
+
+.buttonContainer.secondary .iconContainer {
+    right: auto;
+    left: 22px;
+}
+
+.title {
+    font-family: Clash Display;
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    z-index: 1;
+    position: relative;
+    min-width: fit-content;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 12px 32px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    min-width: 140px;
+    transition: all 0.2s ease;
+}
+
+.buttonContainer:hover {
+    border-color: #0a00c1;
+}
+
+.buttonContainer.disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.buttonContainer.secondary {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+
+.buttonContainer.secondary:hover {
+    background-color: #f8f9fa;
+    border-color: #9ca3af;
+}
+
+.circle {
+    width: 6px;
+    height: 6px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    left: 22px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .buttonContainer {
+        padding: 10px 26px;
+        min-width: 130px;
+        border-radius: 45px;
+    }
+    
+    .title {
+        font-size: 15px;
+    }
+    
+    .iconContainer {
+        right: 18px;
+    }
+    
+    .buttonContainer.secondary .iconContainer {
+        left: 18px;
+    }
+    
+    .circle {
+        left: 18px;
+        width: 5px;
+        height: 5px;
+    }
+    
+    .icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttonContainer {
+        padding: 8px 20px;
+        min-width: 120px;
+        border-radius: 40px;
+    }
+    
+    .title {
+        font-size: 14px;
+    }
+    
+    .iconContainer {
+        right: 16px;
+    }
+    
+    .buttonContainer.secondary .iconContainer {
+        left: 16px;
+    }
+    
+    .circle {
+        left: 16px;
+        width: 4px;
+        height: 4px;
+    }
+    
+    .icon {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttonContainer {
+        padding: 6px 16px;
+        min-width: 110px;
+        border-radius: 35px;
+    }
+    
+    .title {
+        font-size: 13px;
+    }
+    
+    .iconContainer {
+        right: 14px;
+    }
+    
+    .buttonContainer.secondary .iconContainer {
+        left: 14px;
+    }
+    
+    .circle {
+        left: 14px;
+        width: 3px;
+        height: 3px;
+    }
+    
+    .icon {
+        width: 10px;
+        height: 10px;
+    }
+}

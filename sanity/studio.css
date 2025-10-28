@@ -1,0 +1,30 @@
+/* Styles scoped to Sanity Studio only */
+/* Re-enable scrollbars inside Studio despite global hiding rules */
+#sanity, #sanity * {
+  /* Restore default scrollbar behavior for Firefox/IE */
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
+}
+
+/* WebKit-based browsers (Chrome, Safari, Edge) */
+#sanity ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+#sanity ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#sanity ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+/* Ensure common scroll containers inside Studio can scroll */
+#sanity [data-ui='ScrollContainer'],
+#sanity [data-ui='PaneContent'],
+#sanity [data-ui='DefaultLayout'] main,
+#sanity [data-ui='Root'] main {
+  overflow: auto !important;
+}

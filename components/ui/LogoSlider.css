@@ -1,0 +1,150 @@
+@keyframes logo-slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.logo-slider {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    overflow: hidden;
+    padding: 16px 0;
+    background-color: #F0F1FA;
+    position: relative;
+    /* Prevent overlapping outside this component */
+    isolation: isolate;
+    z-index: 0;
+}
+
+.logo-slider::before,
+.logo-slider::after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    /* Keep gradients within the component and non-interactive */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.logo-slider::before {
+    left: 0;
+    background: linear-gradient(to right, #F0F1FA 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-slider::after {
+    right: 0;
+    background: linear-gradient(to left, #F0F1FA 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-slider-track {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 48px;
+    animation: 35s logo-slide linear infinite;
+    will-change: transform;
+}
+
+.logo-slider:hover .logo-slider-track {
+    animation-play-state: paused;
+}
+
+.logo-slider-track img {
+    height: 40px;
+    object-fit: contain;
+    /* Show full-color logos */
+    filter: none;
+    opacity: 1;
+    flex-shrink: 0;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .logo-slider {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding: 40px 0;
+    }
+
+    .logo-slider::before,
+    .logo-slider::after {
+        width: 180px;
+    }
+
+    .logo-slider-track {
+        gap: 64px;
+    }
+
+    .logo-slider-track img {
+        height: 45px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .logo-slider {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 48px 0;
+    }
+
+    .logo-slider::before,
+    .logo-slider::after {
+        width: 220px;
+    }
+
+    .logo-slider-track {
+        gap: 80px;
+    }
+
+    .logo-slider-track img {
+        height: 50px;
+    }
+}
+
+/* Large desktop styles */
+@media (min-width: 1440px) {
+
+    .logo-slider::before,
+    .logo-slider::after {
+        width: 250px;
+    }
+
+    .logo-slider-track {
+        gap: 96px;
+    }
+
+    .logo-slider-track img {
+        height: 55px;
+    }
+}
+
+/* Small mobile optimization */
+@media (max-width: 480px) {
+    .logo-slider {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 24px 0;
+    }
+
+    .logo-slider::before,
+    .logo-slider::after {
+        width: 100px;
+    }
+
+    .logo-slider-track {
+        gap: 32px;
+        animation-duration: 30s;
+        /* Slightly faster on small screens */
+    }
+
+    .logo-slider-track img {
+        height: 48px;
+    }
+}
