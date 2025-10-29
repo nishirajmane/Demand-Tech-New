@@ -7,7 +7,6 @@ Allow: /
 
 # Disallow sensitive or unnecessary paths
 Disallow: /api/
-Disallow: /_next/
 Disallow: /_next/static/
 Disallow: /_next/image
 Disallow: /server-sitemap.xml  # If using next-sitemap server mode
